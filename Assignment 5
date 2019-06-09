@@ -1,0 +1,274 @@
+
+
+<div style="width:80%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+
+<center>
+<head>
+<center>
+<div style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+
+<span id="ohland"></span><span id="ohlandmore"><font color="blue"size="4"><b><u>Title: White Nights</u></b></font><p>
+   <font color="blue"size="3"> Artist: Oh Land</font><p>
+   <font color="blue"size="3"> Album: Oh Land</font><p>
+   <font color="blue"size="3"> Year: 2011</font><p></span>
+
+	
+</div>
+<div class="mid" id="HiddenDiv" style="display: none;width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+<font face="Arial" size="+2" color="#306Eff" align="center"><b><u>Title:Renaissance Affair</u></b><p></font>
+<font color="blue"size="3"> Artist: Hooverphonic</font><p>
+   <font color="blue"size="3"> Album: Blue Wonder Power Milk</font><p>
+   <font color="blue"size="3"> Year: 1998</font><p></span>
+</div>
+<font color="blue"size="6"><u></u><p>
+
+
+ 
+<script>
+let songs = [
+  {
+    title: "Getting Away with It (All Messed Up)",
+    artist: "James",
+    album: "Pleased to Meet You",
+    year: 2001,
+    art: "https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg"
+  },
+  {
+    title: "Renaissance Affair",
+    artist: "Hooverphonic",
+    album: "Blue Wonder Power Milk",
+    year: 1998,
+    art: "https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg"
+  },
+  {
+    title: "White Nights",
+    artist: "Oh Land",
+    album: "Oh Land",
+    year: 2011,
+    art: "https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"
+  }
+]
+</script>
+		
+ 
+
+
+
+<article>
+	
+	<div id="more-1" class="fulltext"style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+
+		<p><font color="blue"size="4"><b><u>Getting Away with It (All Messed Up</u></b></font><p></p>
+		   <font color="blue"size="3"> Artist: James</font><p>
+   <font color="blue"size="3"> Album: Pleased to Meet You</font><p>
+   <font color="blue"size="3"> Year: 2001</font><p></span>
+
+	
+	</div>
+	
+	<button aria-expanded="false" aria-controls="more-1" class="toggle-content" hidden><span class="text"></span> <span class="visually-hidden">
+ <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg"width="100"></span></button>
+</article>
+<script>
+// cut the mustard
+if ('querySelector' in document && 
+	'addEventListener' in window) {
+
+	var toggleButtons = document.querySelectorAll('.toggle-content');
+	var fullTextWrappers = document.querySelectorAll('.fulltext');
+	var fullText;
+	var toggleButtonText;
+	
+
+	[].forEach.call(fullTextWrappers, function(fullTextWrapper) {
+		// hide all full text on load
+		fullTextWrapper.setAttribute('hidden', true);
+	});
+
+	[].forEach.call(toggleButtons, function(toggleButton) {
+		// show toggle more buttons
+		toggleButton.removeAttribute('hidden');
+
+		// add listener for each button
+		toggleButton.addEventListener('click', function () {
+
+			fullTextWrapper = this.parentElement.querySelector('.fulltext');
+			toggleButtonText = this.querySelector('.text');
+
+			// change attributes and text if full text is shown/hidden
+			if (!fullTextWrapper.hasAttribute('hidden')) {
+				toggleButtonText.innerText = '';
+				fullTextWrapper.setAttribute('hidden', true);
+				toggleButton.setAttribute('aria-expanded', false);
+			} else {
+				toggleButtonText.innerText = '';
+				fullTextWrapper.removeAttribute('hidden');
+				toggleButton.setAttribute('aria-expanded', true);
+			}
+		});
+	});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+#text{
+display:none;
+}
+.btn-container{
+  margin: auto;
+  height:44px;
+  width:166.23px;
+  
+}
+a:active{
+  color:#ffd323;
+}
+body{
+   background-color:aqua;
+}
+button{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  cursor:pointer;
+  border:none;
+  padding:8px;
+  font-size:20px;
+  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color:white;
+  font-family:cursive;
+  box-sizing:border-box;
+}
+body{
+  font-family:'Raleway',monospace;
+  font-size:20px;
+  color:white;
+}
+</style>
+
+
+<script>
+$(document).ready(function() {
+  $("#toggle").click(function() {
+    var elem = $("#toggle").text();
+    if (elem == "Read More") {
+      //Stuff to do when btn is in the read more state
+      $("#toggle").text("Read Less");
+      $("#text").slideDown();
+    } else {
+      //Stuff to do when btn is in the read less state
+      $("#toggle").text("Read More");
+      $("#text").slideUp();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a onclick="javascript:ShowHide('HiddenDiv')"><img src="https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg"width="100"></a></p>
+<script type="text/javascript">// <![CDATA[
+function ShowHide(divId)
+{
+if(document.getElementById(divId).style.display == 'none')
+{
+document.getElementById(divId).style.display='block';
+}
+else
+{
+document.getElementById(divId).style.display = 'none';
+}
+}
+// ]]></script>
+
+
+
+
+
+
+
+<button onclick="myFunction()" id="myBtn"> <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"width="100"></button>
+<style>
+#ohlandmore {display: none;}
+</style>
+<script>
+function myFunction() {
+  var ohland = document.getElementById("ohland");
+  var ohlandmoreText = document.getElementById("ohlandmore");
+  var btnText = document.getElementById("myBtn");
+
+  if (ohland.style.display === "none") {
+    ohland.style.display = "inline";
+    btnText.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png'width='100'>"; 
+    ohlandmoreText.style.display = "none";
+  } else {
+    ohland.style.display = "none";
+    btnText.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png'width='100'>"; 
+    ohlandmoreText.style.display = "inline";
+  }
+}
+</script>
+ 
+ 
+</div>
+
+    </html>
+	
+	
+	
+	
+	
+	</center>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
