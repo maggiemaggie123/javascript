@@ -1,0 +1,227 @@
+
+
+
+
+<head>
+<center>
+<div style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+<font color="blue"size="6"><u>Add a text input element, "name," and a date input, "birthday," to a page. </u><p>
+
+<main>
+  <h1>Age & date of Birth</h1>
+  
+  <article id="article-1">
+ 
+</main>
+</head>
+<body>
+ 
+ <input id="first_name" placeholder="First name: "style="width:40%;height:auto;background:lightblue;color:white;padding:10px;float:left;background:lightblue;box-shadow:0px 0px 1px yellow;border-top-right-radius:100px;box-shadow:0px 0px 60px red;border-bottom-left-radius:100px;"><br>
+<p>
+
+
+
+<button id="say" onclick="Javascript:myAgeValidation()" style="width:20%;height:auto;background:lightblue;padding:10px;color:white;float:right;background:lightblue;box-shadow:0px 0px 1px yellow;border-top-right-radius:100px;box-shadow:0px 0px 60px red;border-bottom-left-radius:100px;"><br>
+Continue!</button>
+ 
+<form name="as400samplecode">
+<input id="year" name="myDate"onclick="Javascript:myAgeValidation()"  placeholder="Year Of Birth: " style="width:40%;height:auto;background:lightblue;color:white;padding:10px;float:left;background:lightblue;box-shadow:0px 0px 1px yellow;border-top-right-radius:100px;box-shadow:0px 0px 60px red;border-bottom-left-radius:100px;"><br>
+<p>
+<hr>
+ 
+<SCRIPT LANGUAGE="JavaScript1.2"> <!--
+ 
+function myAgeValidation() {
+ 
+    var lre = /^\s*/;
+    var datemsg = "";
+    
+    var inputDate = document.as400samplecode.myDate.value;
+    inputDate = inputDate.replace(lre, "");
+    document.as400samplecode.myDate.value = inputDate;
+    datemsg = isValidDate(inputDate);
+        if (datemsg != "") {
+            (datemsg);
+            return;
+        }
+        else {
+            //Now find the Age based on the Birth Date
+            getAge(new Date(inputDate));
+        }
+ 
+}
+ 
+function getAge(birth) {
+ 
+    var today = new Date();
+    var nowyear = today.getFullYear();
+    var nowmonth = today.getMonth();
+    var nowday = today.getDate();
+ 
+    var birthyear = birth.getFullYear();
+    var birthmonth = birth.getMonth();
+    var birthday = birth.getDate();
+ 
+    var age = nowyear - birthyear;
+    var age_month = nowmonth - birthmonth;
+    var age_day = nowday - birthday;
+    
+    if(age_month < 0 || (age_month == 0 && age_day <0)) {
+            age = parseInt(age) -1;
+        }
+		
+    alert(age);
+    
+    if ((age == 18 && age_month <= 0 && age_day <=0) || age < 18) {
+    }
+    else {
+        alert("You have crossed your 18th birthday !");
+    }
+ 
+}
+ 
+function isValidDate(dateStr) {
+ 
+    
+    var msg = "";
+    // Checks for the following valid date formats:
+    // MM/DD/YY   MM/DD/YYYY   MM-DD-YY   MM-DD-YYYY
+    // Also separates date into month, day, and year variables
+ 
+    // To require a 2 & 4 digit year entry, use this line instead:
+    //var datePat = /^(\d{1,2})(\/|-)(\d{1,2})\2(\d{2}|\d{4})$/;
+    // To require a 4 digit year entry, use this line instead:
+    var datePat = /^(\d{1,2})(\/|-)(\d{1,2})\2(\d{4})$/;
+ 
+    var matchArray = dateStr.match(datePat); // is the format ok?
+    if (matchArray == null) {
+        msg = "Date is not in a valid format.";
+        return msg;
+    }
+ 
+    month = matchArray[1]; // parse date into variables
+    day = matchArray[3];
+    year = matchArray[4];
+ 
+    
+    if (month < 1 || month > 12) { // check month range
+        msg = "Month must be between 1 and 12.";
+        return msg;
+    }
+ 
+    if (day < 1 || day > 31) {
+        msg = "Day must be between 1 and 31.";
+        return msg;
+    }
+ 
+    if ((month==4 || month==6 || month==9 || month==11) && day==31) {
+        msg = "Month "+month+" doesn't have 31 days!";
+        return msg;
+    }
+ 
+    if (month == 2) { // check for february 29th
+    var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+    if (day>29 || (day==29 && !isleap)) {
+        msg = "February " + year + " doesn't have " + day + " days!";
+        return msg;
+    }
+    }
+ 
+    if (day.charAt(0) == '0') day= day.charAt(1);
+    
+    //Incase you need the value in CCYYMMDD format in your server program
+    //msg = (parseInt(year,10) * 10000) + (parseInt(month,10) * 100) + parseInt(day,10);
+    
+    return msg;  // date is valid
+}
+
+// --> </SCRIPT>
+
+ 
+<script>
+function say_hi() {
+    var fname = document.getElementById('first_name').value;
+    var lname = document.getElementById('year').value;
+ 
+    var html = 'Hi <b>' + fname + '</b> You were Born in ' + lname;
+ 
+    document.getElementById('result').innerHTML = html;
+}
+ 
+document.getElementById('say').addEventListener('click', say_hi);
+ 
+</script>
+ 
+</body>
+</html>
+<div id="result"></div>
+</div>
+
+<div style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+<main>
+<font color="blue"size="6"><u>Add a bunch of images to a page.</u><p>
+  <h1>Image Test</h1>
+  
+  <article id="article-1">
+ 
+</main>
+<script>
+function previewFile(){
+
+   var preview = document.querySelector('img'); 
+   var file    = document.querySelector('input[type=file]').files[0];
+   var reader  = new FileReader();
+
+   reader.onloadend = function () {
+       preview.src = reader.result;
+   }
+   if (file) {
+       reader.readAsDataURL(file); 
+   } else {
+       preview.src = "";
+   }
+}
+
+function foo(){
+    var image =  document.getElementById("image");
+     if (image != null)
+     {
+          image.parentNode.removeChild(image);
+     }
+}
+  previewFile();  
+
+</script> 
+<a href="#" onclick="foo()">
+<img src="" height="200"id="image" alt="Upload Image"><br> <p><p></a>
+<input type="file" onchange="previewFile()"title="Click to Remove this image"><br>
+
+
+
+
+  </body>
+  
+  </div>
+<div style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+<font color="blue"size="6"><u>Javascript function that is passed an arbitrary DOMNode.</u><p>
+<main>
+  <h1>I have an idea</h1>
+  <script>
+
+
+
+
+  </script>
+  
+  
+  
+  
+  
+  
+  
+</main>
+
+</div>
+</html>
+
+
