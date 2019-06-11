@@ -1,0 +1,50 @@
+
+
+<style>
+input{
+	width:40%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+#dp:hover{
+	
+	border:solid 2px blue;font-weight:bold;border-radius:3px;cursor:pointer;
+}
+#dp{
+	
+	width:60%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+
+
+</style><html>
+<head>
+  <title>Character</title>
+</head>
+<body>
+ 
+ <div style="width:70%;height:auto;margin:background:white;float:center;auto;margin-top:50px;border-radius:3px;box-shadow:0px 0px 2px black;padding:10px;">
+ <center><input type="name" id="artist_name"placeholder="Enter name:"><br>
+ <input type="name"id="artist_age"placeholder="Enter your Age"><br>
+ <input type="name"id="favorite_Song"placeholder="Favorite Song"><br>
+ <input type="hidden"id="class_name"value="Character"><br>
+<button id="say">Request</button>
+ 
+<hr>
+<div id="result"></div>
+ 
+<script>
+function say_hi() {
+    var aname = document.getElementById('artist_name').value;
+    var aage = document.getElementById('artist_age').value;
+    var fsong = document.getElementById('favorite_Song').value;
+    var cname = document.getElementById('class_name').value;
+ 
+    var html = '<font color="blue"size="6"><u>' + cname + '</u></font><p><br>Hello <b>' + aname + ' Welcome to ' + cname + '</p> </b><b> Age is '+aage+' Your Favorite Song is '+ fsong;
+ 
+    document.getElementById('result').innerHTML = html;
+}
+ 
+document.getElementById('say').addEventListener('click', say_hi);
+</script>
+</center>
+ </div>
+</body>
+</html>
