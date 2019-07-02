@@ -1,0 +1,59 @@
+
+<style>
+input{
+	width:100%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+#dp:hover{
+	
+	border:solid 2px blue;font-weight:bold;border-radius:3px;cursor:pointer;
+}
+#dp{
+	
+	width:60%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+
+
+</style>
+	<style>
+input{
+	width:40%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+#dp:hover{
+	
+	border:solid 2px blue;font-weight:bold;border-radius:3px;cursor:pointer;
+}
+#dp{
+	
+	width:30%;height:30px;border:solid 1px lightblue;margin-top:10px;
+}
+
+
+</style>
+
+<script>
+$.ajax({
+  url: "https://itp.patrickmcneill.com/data/persons",
+  method: "POST",
+  headers: { key: "1234" },
+  data: {
+    name: "Patrick",
+    email: "pmcneill@berklee.edu"
+  },
+  success: function(result) {
+    console.log("Person's ID is " + result.id);
+  },
+  error: function(err) {
+    console.log("Failed: " + err.responseText);
+  }
+});
+</script>
+
+
+<script>
+
+</script>
+<input type="name"id="name"placeholder="Enter Your name here"><p>
+<input type="email"id="email"placeholder="Enter Youremail here"><p>
+<button id='dp'  onclick='Person()'>Submit</button>
+
+
