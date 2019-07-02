@@ -36,7 +36,7 @@ class Playlist {
   let a = new Song("If i aint got yout","220","Alicia Keys")
   let b = new Podcast("I wanna be down", "190", "Brandy")
   let c = new Movie("The talk", "7200", "", "McDonald")
-  let d = new Podcast("As long as you are here: The Podcast", "10:00:00", "Brandy")
+  let d = new Podcast("As long as you are here: The Podcast", "10440", "Brandy")
   let e = new Movie("Inception", "9640", "Johnsone")
 
   var playlist = [a, b, c, d, e]
