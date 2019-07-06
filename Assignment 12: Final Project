@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.a {
+  text-align: center;
+}
+div {
+  margin: 25px;
+}
+body {font-family: Arial, Heletica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20 px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #003300;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+div.b {
+  font-size: large;
+}
+div.c {
+  font-size: 15px;
+}
+h1 {
+  text-shadow: 3px 2px green;
+}
+ul.a {
+  list-style-position: outside;
+}
+style="text/css">
+div.slide-right {
+  width: 100%;
+  overflow:hidden;
+}
+div.slide-right h5 {
+  animation: 2.5s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+  to {
+    margin-eft: 0%;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="background-image:url('DSC01707 copy.JPG');">
+
+<div>
+<br>
+<h1 style="font-family:verdana;">The Standage Family Band</h1>
+<div class="slide-right"><h5 style="border:2px solid green;"><em>Bluegrass Music From the Past...</em></h5></div>
+
+<p style="font-family:verdana;"><br><br> <b><u>Bio: </u></b></p>
+<div class="b"><p style="font-family:cursive;"><b>The Standage Family Band was founded in 2015, with the purchase of Jessica's banjo. As time passed, they welcomed a guitar, mandolin, and even a homemade washtub bass into the group! They take pride in singing 3-4 part harmonies, most of which are arranged by the band members themselves. Residing in Southen California, the Standage Family Band has been playing together for 4 years, always striving to bring back the honest mountain music from the past into today's busy culture. Sit back, and enjoy the bluegrass!</b></p></div>
+<br>
+
+<p><b><u>YouTube videos:</u></b></p>
+<a href="https://www.youtube.com/watch?v=vQCLFmU6FM4&list=PL_oyeI9jnc0PClRBwS4eW7IQHonXCID7t&index=8"target="_blank"><b>Click to Watch "New River Train" on YouTube</b></a>
+<br><br>
+<a href="https://www.youtube.com/watch?v=1NPRfVw5sOk"target="_blank"><b>Click to Watch "Bile Dem Cabbage Down" on YouTube</b></a>
+<br><br>
+<a href="https://www.youtube.com/watch?v=55lpBCasIFI"target="_blank"><b>Click to Watch "Old Joe Clark" on YouTube</b></a>
+
+
+<br><br><br>
+
+
+
+<p><b><u>Gallery:</u></b></p>
+<br>
+
+<img src="StandageFamilyBand copy.JPG" alt="StandageFamilyBand" style="width:840px;height:600px;">
+<img src="DSC01581 copy.JPG" alt="81" style="width:475px;height:345px;">
+<img src="DSC01648 copy.JPG" alt="48" style="width:475px;height:345px;">
+<img src="DSC01678 copy.JPG" alt="78" style="width:475px;height:345px;">
+<img src="DSC01707 copy.JPG" alt="07" style="width:475px;height:345px;">
+<img src="DSC01745 copy.JPG" alt="45" style="width:475px;height:345px;">
+
+<br><br><br>
+
+<p><b><u> Song List:</u></b></p>
+<select>
+  <option value="Bile Dem Cabbage Down">Bile Dem Cabbage Down</option>
+  <option value="Orange Blossom Special">Orange Blossom Special</option>
+  <option value="Old Joe Clark">Old Joe Clark</option>
+  <option value="Old Joe Clark">Old Joe Clark</option>
+<option value="New River Train">New River Train</option>
+<option value="Dooley (The Dillards)">Dooley (The Dillards)</option>
+<option value="Mountain Dew">Mountain Dew</option>
+<option value="Train 45">Train 45</option>
+<option value="Old Dan Tucker">Old Dan Tucker</option>
+<option value="Shenandoah Valley Breakdown">Shenandoah Valley Breakdown</option>
+<option value="Watermelon on the Vine">Watermelon on the Vine</option>
+<option value="Thank God I'm a Country Boy (John Denver)">Thank God I'm a Country Boy (John Denver)</option>
+<option value="Cindy">Cindy</option>
+<option value="Duelin' Banjos">Duelin' Banjos</option>
+<option value="Country Roads (John Denver)">Country Roads (John Denver)</option>
+<option value="Grandma's Feather Bed (John Denver)">Grandma's Feather Bed (John Denver)</option>
+<option value="Turkey in the Straw<">Turkey in the Straw<</option>
+<option value="Oh Susanna">Oh Susanna/option>
+<option value="Banjo Granny">Banjo Granny</option>
+<option value="Millionaire's Hoedown">Millionaire's Hoedown</option>
+<option value="Uncle Ned">Uncle Ned</option>
+<option value="Many more! Please inquire for a complete list of our repertoire">More</option>
+</select>
+
+
+<br><br><br>
+
+<div class="b"><b><u>Contact us for your next event!</u></b></div>
+
+<div class="container">
+  <form action="mailto:standagefamilyband@gmail.com"method="post"enctype="text/plain">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname"
+name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname"
+name="lastname" placeholder="Your last name..">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+
+<audio controls autoplay>
+  <source src="Bile Dem Cabbage Down.ogg" type="audio/ogg">
+  <source src="Bile Dem Cabbage Down.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
+
+
+<div class="a"><div class="c"> ©2019 StandageFamilyBand</div></div>
