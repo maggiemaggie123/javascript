@@ -1,0 +1,55 @@
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://google.com">
+</iframe>
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://patrickmcneill.com">
+</iframe>
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://patrickmcneill.com/itp/urls.txt">
+</iframe>
+<style>
+iframe {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.output {
+    background: #eee;
+}
+
+</style>
+<script>
+jQuery(document).ready(function($) {
+
+    $(".toggle-container").hide();
+    $(".trigger").toggle(function () {
+        $(this).addClass("active");
+        $(".trigger").find('img').prop('src', 'https://patrickmcneill.com');
+    }, function () {
+        $(this).removeClass("active");
+        $(".trigger").find('img').prop('src', 'https://google.com');
+    });
+    $(".trigger").click(function () {
+        $(this).next(".toggle-container").slideToggle();
+    });
+});
+
+</script>
+</head>
+<body>
+   
+   
+   
+   
+   
+   </body>
+</html>
