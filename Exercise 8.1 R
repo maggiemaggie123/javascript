@@ -1,0 +1,18 @@
+class Character{
+    constructor(name, age, song){
+      this.name = name;
+      this.age = age;
+      this.song = song;
+    }
+       getName(){
+         return this.name +" " + this.song;
+       }
+      }
+
+
+let myCharacter = new Character("Hejia","22", "God Only Knows by the Beach Boys");
+let anotherCharacter = new Character("Gao","23", "Unchained Melody by The Righteous Brothers");
+let thirdCharacter = new Character("Maggie","24","I Say a Little Prayer by Aretha Franklin");
+let fourthCharacter = new Character("Pao","25","Something by The Beatles.");
+
+console.log(myCharacter);
