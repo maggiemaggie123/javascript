@@ -1,0 +1,37 @@
+class Sets{
+  constructor (add, remove, size, has){
+    this.add = add;
+    this.remove = remove;
+    this.size = size;
+    this.has = has;
+  }
+  isEqual(other_set){
+   if (firstset == other_set){
+     console.log('this set ' + this.add + ' is similar');
+   } else {
+     console.log('this set ' + this.add + ' is not similar');
+   }
+  }
+  toArray(){
+    console.log('this set ' + this.remove + ' contains a copied array');
+
+  }
+  forEach(callback){
+    console.log('this set ' + this.size + ' works the elements');
+  }
+  clone(){
+    console.log('this set ' + this.has + ' has similar data but independent');
+  }
+}
+let firstset = new Sets([1,2,3]);
+console.log(firstset);
+let other_set = new Sets([1,4,5]);
+firstset.isEqual(other_set);
+let thirdset = new Sets (["product1", "product2", "product3"]);
+let fourthset = new Sets (["Product1", 1, 2, 4]);
+thirdset.toArray();
+let fifthset = new Sets ([5,6,7]);
+fifthset.forEach();
+let sixthset = new Sets (["Hejia", "Gao", "Maggie"]);
+let seventhset = new Sets (["Hejia", "Gao", "Pao"]);
+sixthset.clone();
