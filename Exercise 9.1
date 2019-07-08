@@ -1,0 +1,51 @@
+class Character {
+  constructor(name, age, song) {
+    this.name = name;
+    this.age = age;
+    this.song = song;
+  }
+
+  getName() {
+    console.log(`${this.name} favorite song is`+ " " + this.song + "  is " + this.age + "Years old");
+  }
+}
+
+class Wizard extends Character {
+  constructor(name, age, song, hobby) {
+    super(name, age, song );
+    this.hobby = hobby;
+
+  }
+  castSpell(){
+    console.log(this.name + this.hobby + " And casts a Spell")
+  }
+  getName() {
+    console.log(`${this.name} favorite song is`+ " " + this.song + " is " + this.age + " years old and a wizzard");
+  }
+}
+
+class Bard extends Character {
+  constructor(name, age, song, instrument){
+    super(name, age, song);
+    this.instrument = instrument;
+  }
+plays(){
+  console.log(this.name + " plays " +  this.instrument)
+}
+
+getName() {
+  console.log(`${this.name} favorite song is`+ " " + this.song + " is " + this.age + " years and a bard");
+}
+
+}
+
+let a = new Character("Hejia's", 15, "God Only Knows");
+a.getName();
+
+let b = new Bard("Gao's", 22, "Unchained Melody", "Xylophone");
+b.getName();
+b.plays();
+
+let d = new Wizard("Pao's", 23, "One and Only", " hobby is singing" );
+d.getName();
+d.castSpell();
